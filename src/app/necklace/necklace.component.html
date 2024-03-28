@@ -1,0 +1,15 @@
+<div class="body">
+<div class="product-container">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-info">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+      </div>
+      <div class="product-image">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+      </div>
+      <button class="view-button" (click)="redirectToAppWithProductId(product.dimage, product.category)">Virtual Try </button>
+    </div>
+  </div>
+  
+</div>
